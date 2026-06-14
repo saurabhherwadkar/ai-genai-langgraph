@@ -1,0 +1,75 @@
+# Application Settings Configuration
+# This file contains all environment-configurable variables
+
+# Application metadata
+app:
+  name: "Travel Booking Multi-Agent System"
+  version: "1.0.0"
+  environment: "development"
+
+# Logging configuration
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  date_format: "%Y-%m-%d %H:%M:%S"
+  file_enabled: true
+  file_path: "logs/travel_agent.log"
+  max_file_size_mb: 10
+  backup_count: 5
+
+# LLM configuration
+llm:
+  provider: "openai"
+  model: "gpt-4o"
+  temperature: 0.1
+  max_tokens: 4096
+  request_timeout_seconds: 60
+  max_retries: 3
+
+# Agent configuration
+agents:
+  max_iterations: 10
+  recursion_limit: 50
+  enable_human_in_loop: false
+
+# Service endpoints (simulated for demo)
+services:
+  flight:
+    base_url: "https://api.flights.example.com"
+    timeout_seconds: 30
+    max_results: 10
+  hotel:
+    base_url: "https://api.hotels.example.com"
+    timeout_seconds: 30
+    max_results: 10
+  car_rental:
+    base_url: "https://api.carrental.example.com"
+    timeout_seconds: 30
+    max_results: 5
+  bus:
+    base_url: "https://api.busservice.example.com"
+    timeout_seconds: 30
+    max_results: 10
+  train:
+    base_url: "https://api.trainservice.example.com"
+    timeout_seconds: 30
+    max_results: 10
+  tour_package:
+    base_url: "https://api.tourpackages.example.com"
+    timeout_seconds: 30
+    max_results: 5
+  sightseeing:
+    base_url: "https://api.sightseeing.example.com"
+    timeout_seconds: 30
+    max_results: 15
+
+# Rate limiting
+rate_limiting:
+  requests_per_minute: 60
+  burst_limit: 10
+
+# Security
+security:
+  input_max_length: 5000
+  sanitize_inputs: true
+  allowed_destinations_file: "config/allowed_destinations.txt"
