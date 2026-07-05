@@ -2,6 +2,19 @@
 
 A multi-agent orchestration system built with **LangGraph 1.2.5** that demonstrates how to coordinate multiple specialized AI agents to handle complex travel booking workflows. Each agent has a single responsibility — booking flights, hotels, rental cars, buses, trains, tour packages, or local sightseeing activities.
 
+## Key Learning Objectives
+
+- Understand how LangGraph's StateGraph defines multi-agent workflow topologies with nodes and edges
+- Implement conditional edges to dynamically route execution based on orchestrator decisions
+- Build stateful agents that maintain and share context through a typed state schema
+- Orchestrate parallel agent execution within a directed graph-based workflow
+- Design single-responsibility agents that compose into complex, production-grade systems
+- Use Pydantic models for strict state validation and type safety across LangGraph nodes
+- Apply checkpointing and state persistence patterns for fault-tolerant agent workflows
+- Integrate external tools and APIs as services consumed by LangGraph agent nodes
+- Apply the orchestrator-worker pattern to decompose natural language requests into parallel subtasks
+- Test and debug multi-agent graphs using structured logging, mocking, and coverage tools
+
 ---
 
 ## Table of Contents
